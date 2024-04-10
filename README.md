@@ -40,7 +40,7 @@ Node.js allows you to run JavaScript code outside of the browser environment, ma
 
 # Running Program
 #### You can run the generated JavaScript file using the HTML file
-- Download extention [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for VScode ![liveserver](images\LiveServer.webp)
+- Download Extention [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for VScode ![liveserver](images\LiveServer.webp)
 - While on [index.html](index.html), click "**Go Live**" on the bottom right-hand side corner ![logo](images\LiveServer_logo.webp)
 - Should open a web page looking like this ![webpage](images\TaskManager.webp)
 

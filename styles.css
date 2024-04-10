@@ -15,10 +15,12 @@ input[type="text"] {
 
 button {
     padding: 8px 15px;
-    background-color: #007bff;
+    background-color: #a50101;
+    border-radius: 15px;
     color: #fff;
     border: none;
     cursor: pointer;
+    margin-left: 15px;
 }
 
 ul {
@@ -28,4 +30,75 @@ ul {
 
 li {
     margin-bottom: 5px;
+}
+
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply font styles to the body */
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    margin: 30px auto;
+}
+
+/* Center the content within the container */
+.container {
+    max-width: 400px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+/* Style the input field */
+#taskInput {
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Style the button */
+#addTaskBtn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    background-color: #b3aaaa;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+#addTaskBtn:hover {
+    background-color: rgb(153, 149, 149);
+}
+
+/* Style the task list */
+#taskList {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Style the list items */
+#taskList li {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 5px 15px;
+    border: #000000;
+    border-radius: 15px;
+    background-color: #b3aaaa86;
+    color: rgb(70, 70, 70);
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+#taskList li:hover {
+    background-color: rgb(217, 217, 217);
 }

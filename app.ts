@@ -58,10 +58,13 @@ class TaskManager {
             const li = document.createElement("li");
             li.textContent = task;
 
-            // Add remove button
-            const removeBtn = document.createElement("button");
-            removeBtn.textContent = "Remove";
-            li.appendChild(removeBtn);
+            // Check if the task already contains a "Remove" button
+            if (!li.querySelector("button")) {
+                // Add remove button only if not already present
+                const removeBtn = document.createElement("button");
+                removeBtn.textContent = "Remove";
+                li.appendChild(removeBtn);
+            }
 
             this.taskList.appendChild(li);
         });
@@ -69,6 +72,8 @@ class TaskManager {
 }
 
 // Initialize the TaskManager when the DOM is ready
+/* Document Object Model (DOM) is a programming interface 
+implemented by browsers to make static websites functional*/
 document.addEventListener("DOMContentLoaded", () => {
     new TaskManager();
 });
