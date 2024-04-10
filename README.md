@@ -1,10 +1,11 @@
 # TypeScript Presentation Part-2
 ### by Edwin Serna and Yusuf Oraby
+## Replit [https://replit.com/@edenpandaboi/OoPL-Task-Manager](https://replit.com/@edenpandaboi/OoPL-Task-Manager)
+## GitHub repo [https://github.com/pandaboi1/OoPL](https://github.com/pandaboi1/OoPL)
+<img src="https://miro.medium.com/v2/resize:fit:1358/1*moJeTvW97yShLB7URRj5Kg.png" alt="TypeScript Logo" width="500px"></img>
 This is a project to allows the user to use an interactive website to create and delete task they with to complete.<br>
 This was created using HTML, CSS, TypeScript and JavaScript.<br>
 **Objective** of this project was to demonstrate the use of **TypeScript** and how it can be used in a program
-
-<img src="https://miro.medium.com/v2/resize:fit:1358/1*moJeTvW97yShLB7URRj5Kg.png" alt="TypeScript Logo" width="500px"></img>
 ## Table of Contents
 - [Setup](#setup)
     - [Step 1 - node.js](#step-1---nodejs)
