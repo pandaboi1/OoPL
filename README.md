@@ -16,6 +16,8 @@ by Edwin Serna and Yusuf Oraby
 *If you have another **IDLE** or **OS**, I would recommend looking at resources [links here](#resources)*
 
 ## Step 1 - Node.js
+If you want to run TypeScript on the server side, to interact with the file system, or to utilize npm packages in your TypeScript projects, then Node.js would be necessary.<br>
+Node.js allows you to run JavaScript code outside of the browser environment, making it suitable for backend development, command-line tools, and more.
 #### Install latest [Node.js](https://nodejs.org/en/) LTS from [https://nodejs.org/en/](https://nodejs.org/en/)
 
 ![Node.js Screenshot](images\Nodejs.webp)
