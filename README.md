@@ -59,9 +59,10 @@ Node.js allows you to run JavaScript code outside of the browser environment, ma
 
 ---
 # Resources
-- [MAC Setup]()
-- [Linux Setup]()
-- [TypeScript Documentation]()
+- [TypeScript](https://www.typescriptlang.org/download)
+- [MAC Setup](https://manwithcode.com/554/how-to-install-typescript-on-macos/)
+- [Linux Setup](https://manwithcode.com/557/how-to-install-typescript-on-linux/)
+- [TypeScript Documentation](https://www.typescriptlang.org/docs/)
 - [Node.js](https://nodejs.org/en/)
 
 ---
