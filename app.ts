@@ -1,30 +1,17 @@
 class TaskManager {
-    private taskList: HTMLUListElement;
+    constructor() {}
 
-    constructor() {
-        this.taskList = document.getElementById("taskList") as HTMLUListElement;
-        const addTaskBtn = document.getElementById("addTaskBtn") as HTMLButtonElement;
-        addTaskBtn.addEventListener("click", this.addTask.bind(this));
-    }
-
-    addTask() {
-        const taskInput = document.getElementById("taskInput") as HTMLInputElement;
-        const taskText = taskInput.value.trim();
-
-        if (taskText !== "") {
-            const li = document.createElement("li");
-            li.textContent = taskText;
-            this.taskList.appendChild(li);
-            taskInput.value = "";
-        } else {
-            alert("Please enter a task!");
-        }
+    addTask(taskText: string): void {
+        console.log(`Adding task: ${taskText}`);
+        // Here, you would implement logic to add the task to your server or perform other server-side operations
     }
 }
 
-// Initialize the TaskManager when the DOM is ready
-document.addEventListener("DOMContentLoaded", () => {
-    new TaskManager();
-});
+// Create an instance of TaskManager
+const taskManager = new TaskManager();
 
+// Sample task text
+const sampleTaskText = "Sample Task";
 
+// Add the sample task
+taskManager.addTask(sampleTaskText);
