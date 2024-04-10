@@ -1,5 +1,9 @@
 # TypeScript Presentation Part-2
-by Edwin Serna and Yusuf Oraby
+### by Edwin Serna and Yusuf Oraby
+This is a project to allows the user to use an interactive website to create and delete task they with to complete.<br>
+This was created using HTML, CSS, TypeScript and JavaScript.<br>
+**Objective** of this project was to demonstrate the use of **TypeScript** and how it can be used in a program
+
 <img src="https://miro.medium.com/v2/resize:fit:1358/1*moJeTvW97yShLB7URRj5Kg.png" alt="TypeScript Logo" width="500px"></img>
 ## Table of Contents
 - [Setup](#setup)
@@ -7,6 +11,8 @@ by Edwin Serna and Yusuf Oraby
     - [Step 2 - Installing TypeScript](#step-2---installing-typescript)
     - [Step 3 - Compile](#step-3---compile)
 - [Running Program](#running-program)
+    - [On VScode](#on-vscode)
+    - [On Replit](3on-replit)
 - [Resources](#resources)
 
 ---
@@ -22,7 +28,7 @@ Node.js allows you to run JavaScript code outside of the browser environment, ma
 
 ![Node.js Screenshot](images/Nodejs.png)
 
-<div align="center"> <b>Optional</b> - Verify with <b><i>Command Prompt</i></b> by typing <b>'node.v'</b><br>output should be like '<b>V20.12.1'</b></div>
+<div align="center"> <b>Optional</b> - Verify with Command Prompt by typing 'node.v'<br>output should be like 'V20.12.1'</div>
 
 
 ## Step 2 - Installing TypeScript
@@ -30,7 +36,7 @@ Node.js allows you to run JavaScript code outside of the browser environment, ma
 #### 2. Type the command ```npm install -g typescript```
 ##### npm (Node Package Manager)
 ![command prompt](images/cmd_TypeScript_Install.png)
-<div align="center"> <b>Optional</b> - Verify with <b><i>Command Prompt</i></b> by typing <b>'tsc -v'</b><br>output should be like '<b>'Version 5.4.4'</b></div>
+<div align="center"> <b>Optional</b> - Verify with Command Prompt by typing 'tsc -v'<br>output should be like 'Version 5.4.4'</div>
 
 ## Step 3 - Compile
 #### While in the relative path of code type ```tsc app.ts``` in the console teminal to compile TypeScript code into JavaScript using TypeScript compiler (tsc)
@@ -40,9 +46,15 @@ Node.js allows you to run JavaScript code outside of the browser environment, ma
 
 # Running Program
 #### You can run the generated JavaScript file using the HTML file
+### On VScode
 - Download Extention [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for VScode ![liveserver](images/LiveServer.png)
 - While on [index.html](index.html), click "**Go Live**" on the bottom right-hand side corner ![logo](images/LiveServer_logo.png)
 - Should open a web page looking like this ![webpage](images/TaskManager.png)
+### On Replit
+- Open up a **shell window** ![shell](images/shell.png)
+- Make sure server is installed with ```python3 -m http.server```
+- Click the link at the bottom of the window ![link](images/link.png)
+- Click "Show web content" in **Webview** window ![webview](images/webview.png)
 
 ---
 # Resources
