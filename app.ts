@@ -1,17 +1,74 @@
 class TaskManager {
-    constructor() {}
+    private taskList: HTMLUListElement;
 
-    addTask(taskText: string): void {
-        console.log(`Adding task: ${taskText}`);
-        // Here, you would implement logic to add the task to your server or perform other server-side operations
+    constructor() {
+        this.taskList = document.getElementById("taskList") as HTMLUListElement;
+        const addTaskBtn = document.getElementById("addTaskBtn") as HTMLButtonElement;
+        addTaskBtn.addEventListener("click", this.addTask.bind(this));
+
+        // Load tasks from local storage when initializing
+        this.loadTasks();
+
+        // Listen for click events on task list to handle removal
+        this.taskList.addEventListener("click", this.handleTaskClick.bind(this));
+    }
+
+    addTask() {
+        const taskInput = document.getElementById("taskInput") as HTMLInputElement;
+        const taskText = taskInput.value.trim();
+        
+        if (taskText !== "") {
+            // Add listed text
+            const li = document.createElement("li");
+            li.textContent = taskText;
+
+            // Add remove button
+            const removeBtn = document.createElement("button");
+            removeBtn.textContent = "Remove";
+            li.appendChild(removeBtn);
+
+            this.taskList.appendChild(li);
+            taskInput.value = "";
+
+            // Save tasks to local storage
+            this.saveTasks();
+        }
+    }
+
+    handleTaskClick(event: MouseEvent) {
+        const target = event.target as HTMLElement;
+        if (target.tagName === "BUTTON") {
+            const li = target.parentElement;
+            if (li) {
+                li.remove();
+                // Save tasks to local storage after removal
+                this.saveTasks();
+            }
+        }
+    }
+
+    saveTasks() {
+        const tasks = Array.from(this.taskList.querySelectorAll("li")).map(li => li.textContent);
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+    }
+
+    loadTasks() {
+        const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+        tasks.forEach((task: string) => {
+            const li = document.createElement("li");
+            li.textContent = task;
+
+            // Add remove button
+            const removeBtn = document.createElement("button");
+            removeBtn.textContent = "Remove";
+            li.appendChild(removeBtn);
+
+            this.taskList.appendChild(li);
+        });
     }
 }
 
-// Create an instance of TaskManager
-const taskManager = new TaskManager();
-
-// Sample task text
-const sampleTaskText = "Sample Task";
-
-// Add the sample task
-taskManager.addTask(sampleTaskText);
+// Initialize the TaskManager when the DOM is ready
+document.addEventListener("DOMContentLoaded", () => {
+    new TaskManager();
+});
