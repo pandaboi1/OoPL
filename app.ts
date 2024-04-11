@@ -13,20 +13,22 @@ class TaskManager {
         this.taskList.addEventListener("click", this.handleTaskClick.bind(this));
     }
 
+
     addTask() {
         const taskInput = document.getElementById("taskInput") as HTMLInputElement;
         const taskText = taskInput.value.trim();
         
         if (taskText !== "") {
-            // Add listed text
+            // Create list item element for the task
             const li = document.createElement("li");
             li.textContent = taskText;
 
-            // Add remove button
+            // Create remove button for the task
             const removeBtn = document.createElement("button");
             removeBtn.textContent = "Remove";
             li.appendChild(removeBtn);
 
+            // Append the task to the task list
             this.taskList.appendChild(li);
             taskInput.value = "";
 
@@ -48,13 +50,16 @@ class TaskManager {
     }
 
     saveTasks() {
+        // Retrieve tasks from the task list and store them in local storage
         const tasks = Array.from(this.taskList.querySelectorAll("li")).map(li => li.textContent);
         localStorage.setItem("tasks", JSON.stringify(tasks));
     }
 
     loadTasks() {
+        // Retrieve tasks from local storage and display them in the task list
         const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
         tasks.forEach((task: string) => {
+            // Create list item element for each task
             const li = document.createElement("li");
             li.textContent = task;
 
@@ -72,8 +77,7 @@ class TaskManager {
 }
 
 // Initialize the TaskManager when the DOM is ready
-/* Document Object Model (DOM) is a programming interface 
-implemented by browsers to make static websites functional*/
+/* Document Object Model (DOM) - a programming interface used to make static websites functional*/
 document.addEventListener("DOMContentLoaded", () => {
     new TaskManager();
 });
