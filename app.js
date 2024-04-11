@@ -46,16 +46,15 @@ var TaskManager = /** @class */ (function () {
         tasks.forEach(function (task) {
             var li = document.createElement("li");
             li.textContent = task;
+            // Check if the task already contains a "Remove" button
+            if (!li.querySelector("button")) {
+                // Add remove button only if not already present
+                var removeBtn = document.createElement("button");
+                removeBtn.textContent = "Remove";
+                li.appendChild(removeBtn);
+            }
             _this.taskList.appendChild(li);
         });
-        // Add remove button only once after all tasks are added
-        if (!this.taskList.querySelector("button")) {
-            var removeBtn_1 = document.createElement("button");
-            removeBtn_1.textContent = "Remove";
-            this.taskList.querySelectorAll("li").forEach(function (li) {
-                li.appendChild(removeBtn_1.cloneNode(true)); // Append a clone of the remove button to each task
-            });
-        }
     };
     return TaskManager;
 }());
