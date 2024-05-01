@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Prolog File",
+            "type": "shell",
+            "command": "C:\\Program Files\\swipl\\bin\\swipl.exe", // Replace this with the path to your Prolog executable
+            "args": ["prime.pl"], // Replace this with the name of your Prolog file
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
